@@ -39,6 +39,13 @@
     <!-- Our own script -->
     <script>
       $("#submitSignInBtt").on("click", () => console.log("Sent this data"));
+
+      var emailInput= $("#emailSignIn").val()
+      var passwordInput= $("#passwordSignIn").val()
+
+      function onSubmitSignIn () {
+        console.log ("This is the submitted info" + emailInput + passwordInput)
+      }
     </script>
 
 
