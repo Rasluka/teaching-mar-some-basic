@@ -16,10 +16,15 @@
   <body>
     <!-- Content Here -->
             <form class="bg-body w-50 p-3 shadow-lg rounded mt-5 mx-auto">
-              <h1 class="text-center">Sign up</h1>
+              <h1 class="text-center">Sign up for free</h1>
               <div class="form-group">
-        <label >First and Lastname</label>
-        <input type="text" class="form-control" id="firstname-lastname" placeholder="Enter first and lastname">
+        <label >Full name</label>
+        <input type="text" class="form-control" id="firstnameLastname" placeholder="Enter your first and lastname">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group">
+        <label >Email</label>
+        <input type="text" class="form-control" id="emailSignUp" placeholder="Enter your email address">
         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
       <div class="form-group">
@@ -27,16 +32,19 @@
         <input type="text" class="form-control" id="username" placeholder="Enter username">
         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <div class="password">
+        <label for="passwordSignUp">Password</label>
+        <input type="password" class="form-control" id="passwordSignUp" placeholder="Password">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Confirm Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
       </div>
       </div>
-      <button type="submit" class=" btn btn-primary mt-3 me-md-2 ">Submit</button>
+      <div>
+        
+      </div>
+      <button type="submit" id= "submitSignUpBtt" class=" btn btn-primary mt-3 me-md-2 ">Submit</button>
       <a class="btn btn-secondary mt-3" href="sign-in.html">Visit Sign in</a>
 </button>
 
@@ -45,6 +53,23 @@
     <!-- Our own script -->
     <script>
       $("#submitBtt").on("click", () => console.log("Sent this data"));
+
+    </script>
+
+      <script>
+      $("#submitSignUpBtt").on("click", onSubmitSignUp);
+
+      
+      function onSubmitSignUp (event) {
+        event.preventDefault()
+        var fullname= $("#firstnameLastname").val()
+        var emailInput= $("#emailSignUp").val()
+        var username= $("#username").val ()
+      var passwordInput= $("#passwordSignUp").val()
+      var confirmPasswordInput= $("#confirmPassword").val()
+        console.log ("This is the submitted info " , fullname, emailInput, username, passwordInput, confirmPasswordInput)
+      }
+    
     </script>
 
     <!-- Bootstrap script -->
@@ -55,4 +80,4 @@
     ></script>
   </body>
 </html>
-IN
+
