@@ -38,9 +38,17 @@
 
     <!-- Our own script -->
     <script>
-      $("#submitSignInBtt").on("click", () => console.log("Sent this data"));
-    </script>
+      $("#submitSignInBtt").on("click", onSubmitSignIn);
 
+      
+      function onSubmitSignIn (event) {
+        event.preventDefault()
+        var emailInput= $("#emailSignIn").val()
+      var passwordInput= $("#passwordSignIn").val()
+        console.log ("This is the submitted info " , emailInput , passwordInput)
+      }
+    </script>
+...I<3U...
 
     <!-- Bootstrap script -->
     <script
