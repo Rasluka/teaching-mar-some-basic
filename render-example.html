@@ -90,11 +90,36 @@
     </form>
 
     <!-- Content Here -->
-    <div id="contenedor" class="row row-cols-2 w-75 mx-auto my-3"></div>
+    <div id="contenedor" class="row row-cols-2 w-75 mx-auto my-3 justify-content-center"></div>
 
     <!-- Our own script -->
     <script>
       $("#submitBtt").on("click", onSubmitClicked);
+
+      var cardsData = [
+        {
+          username: "MarcelaAburto",
+          description: "Hello I am Marcela from Nicaragua, I am 26 and I am learning code.",
+          image: "https://thumbs.dreamstime.com/z/landscape-nature-mountan-alps-rainbow-76824355.jpg"
+        },
+        {
+          username: "JorgeObando",
+          description: "Hello I am Jorge from Nicaragua, I am 26 and I am learning code.",
+          image: "https://thumbs.dreamstime.com/z/landscape-nature-mountan-alps-rainbow-76824355.jpg"
+        },
+        {
+          username: "LuisReyes",
+          description: "Hello I am Luis from Nicaragua, I am 26 and I am learning code.",
+          image: "https://thumbs.dreamstime.com/z/landscape-nature-mountan-alps-rainbow-76824355.jpg"
+        },
+        {
+          username: "MariaReyes",
+          description: "Hello I am Maria from Nicaragua, I am 26 and I am learning code.",
+          image: "https://thumbs.dreamstime.com/z/landscape-nature-mountan-alps-rainbow-76824355.jpg"
+        }
+      ]
+
+      cardsData.map(renderACard);
 
       function onSubmitClicked(e) {
         e.preventDefault();
